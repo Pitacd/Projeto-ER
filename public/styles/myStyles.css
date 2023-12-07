@@ -13,7 +13,7 @@ body{
     overflow: hidden;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    background: yellow;
+    background: #FBAB3C;
     font-size: 20px;
 }
 #navBar>*{
@@ -30,8 +30,8 @@ body{
     aspect-ratio: 16/9;
 }
 #moreOpcIcon{
-    background: url("/public/images/menu.png") center/contain no-repeat;
+    background: url("/public/images/optionsIcon.png") center/contain no-repeat;
 }
 #feedbackIcon{
-    background: url("/public/images/feedback.png") center/contain no-repeat;
+    background: url("/public/images/feedbackIcon.png") center/contain no-repeat;
 }
