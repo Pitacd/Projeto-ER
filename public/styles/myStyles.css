@@ -35,3 +35,7 @@ body{
 #feedbackIcon{
     background: url("/public/images/feedbackIcon.png") center/contain no-repeat;
 }
+
+#contentBox{
+    margin-top: 4rem;
+}
