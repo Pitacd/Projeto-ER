@@ -18,11 +18,11 @@
     </nav>
     <div id="paymentInfo" class="container">
         <div class="label row">Estado do pagamento</div>
-        <div id="paymentState" class="row">Pago</div>
+        <div id="paymentState" class="row"></div>
         <div class="label row">Referência de multibanco</div>
-        <div id="paymentReference" class="row">208123013</div>
+        <div id="paymentReference" class="row"></div>
         <div class="label row">Valor a Pagar</div>
-        <div id="paymentPriceValue" class="row">16.00€</div>
+        <div id="paymentPrice" class="row"></div>
     </div>
     <footer>
         Universidade da Madeira
@@ -34,5 +34,23 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
         crossorigin="anonymous">
     </script>
+
+    <script>
+        let payment = {
+            state : "Pago",
+            reference : 123890456,
+            price : 67.00,
+        };
+        color
+
+        let paymentStateDisplay = document.getElementById("paymentState");
+        let paymentReferenceDisplay = document.getElementById("paymentReference");
+        let paymentPriceDisplay = document.getElementById("paymentPrice");
+
+        paymentStateDisplay.insertAdjacentHTML("afterbegin", payment.state);
+        paymentReferenceDisplay.insertAdjacentHTML("afterbegin", payment.reference);
+        paymentPriceDisplay.insertAdjacentHTML("afterbegin", `${payment.price.toFixed(2)}€`)
+    </script>
+
 </body>
 </html>
