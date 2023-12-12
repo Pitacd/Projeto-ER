@@ -1,8 +1,10 @@
 html{
     height: 100%;
+    font-family: "Gill Sans", sans-serif;
 }
 body{
     max-height: 100%;
+    background:#cdd4de;
 }
 #navBar{
     width: 100%;
@@ -13,7 +15,7 @@ body{
     overflow: hidden;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    background: #FBAB3C;
+    background:  #cdab27;
     font-size: 20px;
 }
 #navBar>*{
@@ -21,6 +23,7 @@ body{
 }
 #pageName{
     margin-left: 1em;
+    font-weight: bold;
     text-align: left;
     text-transform: uppercase;
 }
@@ -53,26 +56,39 @@ body{
     grid-template-rows: 50% 50%;
     margin-top: 0.5em;
     border-radius: 5px;
-    background: rgba(100, 100, 223, 0.719);
 }
+
+.lateEventBox{
+    background: rgb(213, 161, 64);
+}
+
+.willArriveEventBox{
+    background: rgb(138, 138, 228);
+}
+
+.cancelEventBox{
+    background: rgb(198, 73, 73);
+}
+
 .boxBusEvent > * {
-    margin: 0.5em 0;
+    margin: 0.5em 0.5em;
     display: block;
+    font-weight: bold;
 }
 
 .boxTimeEvent>span{
     margin-left:  1em;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .boxTimeEvent::before,
 .busID::before{
     content: "";
     display: inline-block;
-    margin-right: 0.5em; 
-    width: 2.5em;
-    aspect-ratio: 16/9;
+    margin-right: 0.3em; 
+    height: 100%;
+    aspect-ratio: 1/1;
 }
 
 .tillArrive::before{
