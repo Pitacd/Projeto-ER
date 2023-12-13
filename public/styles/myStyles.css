@@ -1,7 +1,9 @@
+/* Root */
 html{
     height: 100%;
     font-family: "Gill Sans", sans-serif;
 }
+
 body{
     overscroll-behavior: none;
     max-height: 100%;
@@ -21,23 +23,28 @@ body{
     background:  #cdab27;
     font-size: 20px;
 }
+
 #navBar>*{
     margin: 1rem;
 }
+
 #pageName{
     margin-left: 1em;
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
 }
+
 #moreOpcIcon,
 #feedbackIcon{
     height: 60%;
     aspect-ratio: 16/9;
 }
+
 #moreOpcIcon{
     background: url("../images/optionsIcon.png") center/contain no-repeat;
 }
+
 #feedbackIcon{
     background: url("../images/feedbackIcon.png") center/contain no-repeat;
 }
@@ -120,33 +127,34 @@ footer{
     width: 100%;
 }
 
-/* Pagamento */
+/* Payment */
 #paymentInfo{
     height: inherit;
-    margin-top: 4rem ;
-    width: 90%;
+    margin-top: 4rem;
+    width: 85%;
+    padding: 0 7.5%;
 }
 
 #paymentInfo>:not(.label){
     border: solid black 1px;
-    border-radius: 0.75rem;
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
 
 #paymentInfo>.label {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     margin-bottom: 0.25rem;
     border: none;
 }
 
 #paymentPrice{
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 1rem;
     font-weight: 100;
 }
 
 #paymentReference,
 #paymentState{
+    font-size: 1.25rem;
     padding: 1rem;
-    font-size:1.5rem;
 }
