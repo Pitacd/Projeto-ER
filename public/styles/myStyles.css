@@ -1,9 +1,11 @@
 html{
     height: 100%;
+    font-family: "Gill Sans", sans-serif;
 }
 body{
     overscroll-behavior: none;
     max-height: 100%;
+    background:#cdd4de;
 }
 
 /* Navbar */
@@ -16,7 +18,7 @@ body{
     overflow: hidden;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    background: #FBAB3C;
+    background:  #cdab27;
     font-size: 20px;
 }
 #navBar>*{
@@ -24,6 +26,7 @@ body{
 }
 #pageName{
     margin-left: 1em;
+    font-weight: bold;
     text-align: left;
     text-transform: uppercase;
 }
@@ -33,10 +36,78 @@ body{
     aspect-ratio: 16/9;
 }
 #moreOpcIcon{
-    background: url("/public/images/optionsIcon.png") center/contain no-repeat;
+    background: url("../images/optionsIcon.png") center/contain no-repeat;
 }
 #feedbackIcon{
-    background: url("/public/images/feedbackIcon.png") center/contain no-repeat;
+    background: url("../images/feedbackIcon.png") center/contain no-repeat;
+}
+
+#contentBox{
+    margin-top: 4rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    font-size: 18px;  
+}
+
+#contentBox::-webkit-scrollbar{
+    display: none;
+}
+
+.boxBusEvent{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin-top: 0.5em;
+    border-radius: 5px;
+}
+
+.lateEventBox{
+    background: rgb(213, 161, 64);
+}
+
+.willArriveEventBox{
+    background: rgb(138, 138, 228);
+}
+
+.cancelEventBox{
+    background: rgb(198, 73, 73);
+}
+
+.boxBusEvent > * {
+    margin: 0.5em 0.5em;
+    display: block;
+    font-weight: bold;
+}
+
+.boxTimeEvent>span{
+    margin-left:  1em;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.boxTimeEvent::before,
+.busID::before{
+    content: "";
+    display: inline-block;
+    margin-right: 0.3em; 
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.tillArrive::before{
+    background: url("../images/clockIcon.png") center/contain no-repeat;    
+}
+
+.isLate::before{
+    background: url("../images/lateIcon.png") center/contain no-repeat;
+}
+
+.gotCancel::before{
+    background: url("../images/cancelIcon.png") center/contain no-repeat;
+}
+
+.busID::before{
+    background: url("../images/busIcon.png") center/contain no-repeat;
 }
 
 /* Footer */
