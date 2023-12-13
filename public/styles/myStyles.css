@@ -107,13 +107,27 @@ body{
     background: url("../images/busIcon.png") center/contain no-repeat;
 }
 
-#busPassImageTittle{
+#pRegister,
+#pLogin{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#busPassImageTittle,
+#LoginImageTitle,
+#RegisterImageTitle{
     text-align: center;
     position: relative;
     z-index: -1;
 }
 
-#busPassImageTittle>img{
+#busPassImageTittle>img,
+#LoginImageTitle>img,
+#RegisterImageTitle>img{
     width: 60%;
     aspect-ratio: 1/1;
 }
@@ -134,19 +148,25 @@ body{
     text-align: center;
 }
 
-#formToConnectBusPass{
+#formToConnectBusPass,
+#formToLogin,
+#formToRegister{
     margin-top: 0.5em;
     display: grid;
     grid-template-rows: auto auto auto auto;
 }
 
-#formToConnectBusPass>label{
+#formToConnectBusPass>label,
+#formToLogin>label,
+#formToRegister>label{
     margin: 1em auto 0; 
     display: grid;
     grid-template-rows: auto auto;
 }
 
-#formToConnectBusPass>label>input{
+#formToConnectBusPass>label>input,
+#formToLogin>label>input,
+#formToRegister>label>input{
     width: 80vw;
     height: 2.5em;
     margin-top: 0.5em;
@@ -154,13 +174,17 @@ body{
     font-size: 16px;
 }
 
-#formConnectBusPassBtns{
+#formConnectBusPassBtns,
+#divLoginBtns,
+#divRegisterBtns{
     display: grid;
     grid-template-columns: auto auto;
     margin-top: 2.5em;
 }
 
-#formConnectBusPassBtns button{
+#formConnectBusPassBtns button,
+#divLoginBtns button,
+#divRegisterBtns button{
     min-width: 80%;
     height: 3.2em;
     margin-inline: auto;
@@ -170,12 +194,16 @@ body{
     font-size: 1.1em;
 }
 
-#btnSendFormBusPass{
+#btnSendFormBusPass,
+#btnSendFormLogin,
+#btnSendFormRegister{
     background: rgb(255, 255, 62);
     color: rgb(83, 83, 83);
 }
 
-#btnSendFormBusPass+button{
+#btnSendFormBusPass+button,
+#btnSendFormLogin+button,
+#btnSendFormRegister+button{
     background: rgb(151, 151, 151);
     color: white;
 }
