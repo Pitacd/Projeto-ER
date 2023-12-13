@@ -128,6 +128,12 @@ body{
     font-size: 20px;
 }
 
+#busPassImageTittle+p{
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+}
+
 #formToConnectBusPass{
     margin-top: 0.5em;
     display: grid;
