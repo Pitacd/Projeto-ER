@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/styles/myStyles.css">
-    <title>Transporte Horários - UMaHora</title>
+    <title>Register</title>
 </head>
 <body>
-    <div id="contentBox" class="center">
-        <form action="#">
+    <div id="contentBox">
+        <div id="RegisterImageTittle">
+            <img src="../public/images/busPassIcon.png">
+            <p>Registrar</p>
+        </div>
+        <form id="formToRegister" action="#">
             <label>
-                Email académico <br>
-                <input type="text" name="email"><br><br>
+                Email académico
+                <input type="email" name="email">
             </label>
             <label>
-                Palavra-passe<br>
-                <input type="password" name="password"><br><br>
+                Palavra-passe
+                <input type="password" name="password">
             </label>
             <label>
-                Confirmar palavra-passe<br>
-                <input type="password" name="confirmPassword"><br><br>
+                Confirmar palavra-passe
+                <input type="password" name="confirmPassword">
             </label>
-            <button type="submit">Registrar</button>
-            <button>Login</button>
+            <div id="divRegisterBtns">
+                <button type="submit" id="btnSendFormRegister" name="sendFormRegister">Registrar</button>
+                <button type="button" name="redirectLogin">Login</button>  
+            </div>
         </form>
-        
     </div>
 </body>
 </html>
