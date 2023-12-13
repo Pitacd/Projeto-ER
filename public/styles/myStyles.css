@@ -106,3 +106,7 @@ body{
 .busID::before{
     background: url("../images/busIcon.png") center/contain no-repeat;
 }
+
+.center{
+    text-align: center;
+}
