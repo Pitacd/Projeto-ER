@@ -54,7 +54,7 @@ body{
     overflow-y: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none;
-    font-size: 18px;  
+    font-size: 18px; 
 }
 
 #contentBox::-webkit-scrollbar{
@@ -117,6 +117,81 @@ body{
     background: url("../images/busIcon.png") center/contain no-repeat;
 }
 
+
+#busPassImageTittle{
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+
+#busPassImageTittle>img{
+    width: 60%;
+    aspect-ratio: 1/1;
+}
+
+#busPassImageTittle>p{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#busPassImageTittle+p{
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+#formToConnectBusPass{
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+#formToConnectBusPass>label{
+    margin: 1em auto 0; 
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+#formToConnectBusPass>label>input{
+    width: 80vw;
+    height: 2.5em;
+    margin-top: 0.5em;
+    padding-inline: 0.5em;
+    font-size: 16px;
+}
+
+#formConnectBusPassBtns{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 2.5em;
+}
+
+#formConnectBusPassBtns button{
+    min-width: 80%;
+    height: 3.2em;
+    margin-inline: auto;
+    border: none;
+    border-radius: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#btnSendFormBusPass{
+    background: rgb(255, 255, 62);
+    color: rgb(83, 83, 83);
+}
+
+#btnSendFormBusPass+button{
+    background: rgb(151, 151, 151);
+    color: white;
+}
+
+
 /* Footer */
 footer{
     background:black;
@@ -158,3 +233,4 @@ footer{
     font-size: 1.25rem;
     padding: 1rem;
 }
+
