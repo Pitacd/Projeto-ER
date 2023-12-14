@@ -102,20 +102,20 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
-#busPassImageTittle,
+#busPassImageTitle,
 #LoginImageTitle,
 #RegisterImageTitle{
     text-align: center;
     position: relative;
     z-index: -1;
 }
-#busPassImageTittle>img,
+#busPassImageTitle>img,
 #LoginImageTitle>img,
 #RegisterImageTitle>img{
     width: 60%;
     aspect-ratio: 1/1;
 }
-#busPassImageTittle>p{
+#busPassImageTitle>p{
     width: 100%;
     margin: 0;
     position: absolute;
@@ -124,7 +124,7 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
-#busPassImageTittle+p{
+#busPassImageTitle+p{
     width: 90%;
     margin-inline: auto;
     text-align: center;
@@ -183,8 +183,17 @@ body{
     color: white;
 }
 /* Payment */
+#busPassPaymentTitle,
+#busPassPaymentInfo
+{
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+#busPassPaymentTitle>img{
+    height: 8em;
+}
 #paymentInfo{
-    width: 90%;
+    width: 80%;
     margin: 1em auto 0;
 }
 #paymentInfo>fieldset{
@@ -196,7 +205,7 @@ body{
 #paymentInfo legend{
     padding: 0.2em 0.5em;
     border-radius: 0.2em;
-    background: rgb(181, 181, 11);
+    background: rgb(66, 66, 6);
     color: white;
     font-weight: bold;
 }
