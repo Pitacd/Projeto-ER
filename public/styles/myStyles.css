@@ -40,6 +40,7 @@ body{
 }
 #contentBox{
     margin-top: 4rem;
+    padding-bottom: 4rem;
     overflow-y: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none;
@@ -208,6 +209,7 @@ body{
     background: rgb(66, 66, 6);
     color: white;
     font-weight: bold;
+    font-size: 16px;
 }
 #paymentPrice{
     font-size: 2.5rem;
