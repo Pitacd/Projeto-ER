@@ -1,5 +1,5 @@
-function controller(req, res){
+function get(req, res){
     res.sendFile(`busSchedules.html`, { root: 'views' });
 }
 
-module.exports = controller
+module.exports = { get };
