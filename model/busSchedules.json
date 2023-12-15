@@ -1,0 +1,106 @@
+{
+    "busSchedules":[
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "8:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "8:30",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "9:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "9:30",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "10:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "11:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "12:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "13:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "14:30",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "14:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "15:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "16:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "17:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "17:30",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "18:00",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "18:30",
+            "eventType": "arrive"
+        },
+        {
+            "busNumber": 51,
+            "busName": "Universidade da Madeira - Centro",
+            "busScheduleTime": "19:00",
+            "eventType": "arrive"
+        }
+    ]
+}
