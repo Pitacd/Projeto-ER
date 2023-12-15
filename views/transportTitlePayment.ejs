@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/myStyles.css">
+    <title>Pagamento do Passe - UMaHora</title>
+</head>
+<body>
+    <nav id="navBar">
+        <div id="moreOpcIcon"></div>
+        <div id="pageName">Passe</div>
+        <div id="feedbackIcon"></div>
+    </nav>
+    <div id="contentBox">
+        <div id="paymentInfo">
+            <div id="busPassPaymentTitle"> 
+                <h3>Pagamento Do Passe Mensal</h3>
+                <img src="../public/images/mbMultibancoIcon.png" alt="">
+            </div>
+            <div id="busPassPaymentInfo">
+                <h4>Pagamento Via Multibanco - Pagamento de Serviços</h4>
+                <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking. Utilizae a entidade <b>12345</b>.</p>
+            </div>
+            <fieldset>
+                <legend>Estado do pagamento</legend>
+                <div id="paymentState"><%= payment.state %></div>
+            </fieldset>
+            <fieldset>
+                <legend>Referência de multibanco</legend>
+                <div id="paymentReference"><%= payment.reference %></div>
+            </fieldset>
+            <fieldset>
+                <legend>Valor a Pagar</legend>
+                <div id="paymentPrice"><%= payment.price.toFixed(2) %></div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
