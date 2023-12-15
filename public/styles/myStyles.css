@@ -222,9 +222,9 @@ body{
     background: rgb(255, 255, 62);
     color: rgb(83, 83, 83);
 }
-#btnSendFormBusPass+button,
-#btnSendFormLogin+button,
-#btnSendFormRegister+button{
+#btnSendFormBusPass+a>button,
+#btnSendFormLogin+a>button,
+#btnSendFormRegister+a>button{
     background: rgb(151, 151, 151);
     color: white;
 }
