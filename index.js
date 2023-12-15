@@ -8,7 +8,7 @@ const paymentRoute = require('./routes/paymentRoute');
 const passAssociationRoute = require('./routes/passAssociationRoute');
 const loginRoute = require('./routes/loginRoute');
 const registryRoute = require('./routes/registryRoute');
-//const passVisualizationRoute = require('./routes/passVisualizationRoute');
+const passVisualizationRoute = require('./routes/passVisualizationRoute');
 
 // Other constants
 const PORT = 3000;
@@ -27,6 +27,6 @@ app.use(paymentRoute);
 app.use(passAssociationRoute);
 app.use(loginRoute);
 app.use(registryRoute);
-//app.use(passVisualizationRoute);
+app.use(passVisualizationRoute);
 
 app.listen(PORT, console.log(`Listenning at port ${ PORT }`));
