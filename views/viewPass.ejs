@@ -6,11 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <nav id="navBar">
-        <div id="moreOpcIcon"></div>
-        <div id="pageName">Passe</div>
-        <div id="feedbackIcon"></div>
-    </nav>
+    <%- include("../views/partials/navBar.ejs"); %>
+    <%- include("../views/partials/moreOpcOverlay.ejs"); %>
     <div id="contentBox">
         <div id="paymentInfo">
             <div id="busPassPaymentTitle"> 
@@ -33,5 +30,6 @@
             </fieldset>
         </div>
     </div>
+    <script src="../public/scripts/overlayMoreOpcPages.js"></script>
 </body>
 </html>
