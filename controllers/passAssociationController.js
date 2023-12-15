@@ -1,5 +1,5 @@
-function controller(req, res){
-    res.sendFile('connectPass.html', { root : 'views' });
+function get(req, res){
+    res.render('connectPass.ejs');
 }
 
-module.exports = controller;
+module.exports = { get };
