@@ -38,50 +38,42 @@ body{
 #feedbackIcon{
     background: url("../images/feedbackIcon.png") center/contain no-repeat;
 }
-
 #contentBox{
     margin-top: 4rem;
+    padding-bottom: 4rem;
     overflow-y: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none;
     font-size: 18px; 
 }
-
 #contentBox::-webkit-scrollbar{
     display: none;
 }
-
 .boxBusEvent{
     display: grid;
     grid-template-rows: 50% 50%;
     margin-top: 0.5em;
     border-radius: 5px;
 }
-
 .lateEventBox{
     background: rgb(213, 161, 64);
 }
-
 .willArriveEventBox{
     background: rgb(138, 138, 228);
 }
-
 .cancelEventBox{
     background: rgb(198, 73, 73);
 }
-
 .boxBusEvent > * {
     margin: 0.5em 0.5em;
     display: block;
     font-weight: bold;
 }
-
 .boxTimeEvent>span{
     margin-left:  1em;
     font-size: 0.9em;
     font-weight: normal;
 }
-
 .boxTimeEvent::before,
 .busID::before{
     content: "";
@@ -90,23 +82,18 @@ body{
     height: 100%;
     aspect-ratio: 1/1;
 }
-
 .tillArrive::before{
     background: url("../images/clockIcon.png") center/contain no-repeat;    
 }
-
 .isLate::before{
     background: url("../images/lateIcon.png") center/contain no-repeat;
 }
-
 .gotCancel::before{
     background: url("../images/cancelIcon.png") center/contain no-repeat;
 }
-
 .busID::before{
     background: url("../images/busIcon.png") center/contain no-repeat;
 }
-
 #pRegister,
 #pLogin{
     width: 100%;
@@ -116,23 +103,20 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
-
-#busPassImageTittle,
+#busPassImageTitle,
 #LoginImageTitle,
 #RegisterImageTitle{
     text-align: center;
     position: relative;
     z-index: -1;
 }
-
-#busPassImageTittle>img,
+#busPassImageTitle>img,
 #LoginImageTitle>img,
 #RegisterImageTitle>img{
     width: 60%;
     aspect-ratio: 1/1;
 }
-
-#busPassImageTittle>p{
+#busPassImageTitle>p{
     width: 100%;
     margin: 0;
     position: absolute;
@@ -141,13 +125,11 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
-
-#busPassImageTittle+p{
+#busPassImageTitle+p{
     width: 90%;
     margin-inline: auto;
     text-align: center;
 }
-
 #formToConnectBusPass,
 #formToLogin,
 #formToRegister{
@@ -155,7 +137,6 @@ body{
     display: grid;
     grid-template-rows: auto auto auto auto;
 }
-
 #formToConnectBusPass>label,
 #formToLogin>label,
 #formToRegister>label{
@@ -163,7 +144,6 @@ body{
     display: grid;
     grid-template-rows: auto auto;
 }
-
 #formToConnectBusPass>label>input,
 #formToLogin>label>input,
 #formToRegister>label>input{
@@ -173,7 +153,6 @@ body{
     padding-inline: 0.5em;
     font-size: 16px;
 }
-
 #formConnectBusPassBtns,
 #divLoginBtns,
 #divRegisterBtns{
@@ -181,7 +160,6 @@ body{
     grid-template-columns: auto auto;
     margin-top: 2.5em;
 }
-
 #formConnectBusPassBtns button,
 #divLoginBtns button,
 #divRegisterBtns button{
@@ -193,57 +171,55 @@ body{
     font-weight: bold;
     font-size: 1.1em;
 }
-
 #btnSendFormBusPass,
 #btnSendFormLogin,
 #btnSendFormRegister{
     background: rgb(255, 255, 62);
     color: rgb(83, 83, 83);
 }
-
 #btnSendFormBusPass+button,
 #btnSendFormLogin+button,
 #btnSendFormRegister+button{
     background: rgb(151, 151, 151);
     color: white;
 }
-
-/* Footer */
-footer{
-    background:black;
-    color: white;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Payment */
+#busPassPaymentTitle,
+#busPassPaymentInfo
+{
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+#busPassPaymentTitle>img{
+    height: 8em;
+}
 #paymentInfo{
-    height: inherit;
-    margin-top: 4rem;
-    width: 85%;
-    padding: 0 7.5%;
+    width: 80%;
+    margin: 1em auto 0;
 }
-
-#paymentInfo>:not(.label){
+#paymentInfo>fieldset{
     border: solid black 1px;
-    border-radius: 0.5rem;
+    border-radius: 0.5em;
     margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.5);
 }
-
-#paymentInfo>.label {
-    font-size: 1.45rem;
-    margin-bottom: 0.25rem;
-    border: none;
+#paymentInfo legend{
+    padding: 0.2em 0.5em;
+    border-radius: 0.2em;
+    background: rgb(66, 66, 6);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
-
 #paymentPrice{
     font-size: 2.5rem;
     padding: 1rem;
-    font-weight: 100;
+    font-weight: bold;
+    &::after{
+        content: "€";
+        padding-left: 0.2em;
+    }
 }
-
 #paymentReference,
 #paymentState{
     font-size: 1.25rem;

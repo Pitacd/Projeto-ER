@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/styles/myStyles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/styles/myStyles.css">
+    <title>Pagamento do Passe - UMaHora</title>
 </head>
 <body>
     <nav id="navBar">
         <div id="moreOpcIcon"></div>
-        <div id="pageName">Pagamento do Passe</div>
+        <div id="pageName">Passe</div>
         <div id="feedbackIcon"></div>
     </nav>
-    <div id="paymentInfo" class="container">
-        <div class="label row">Estado do pagamento</div>
-        <div id="paymentState" class="row"></div>
-        <div class="label row">Referência de multibanco</div>
-        <div id="paymentReference" class="row"></div>
-        <div class="label row">Valor a Pagar</div>
-        <div id="paymentPrice" class="row"></div>
+    <div id="contentBox">
+        <div id="paymentInfo">
+            <div id="busPassPaymentTitle"> 
+                <h3>Pagamento Do Passe Mensal</h3>
+                <img src="../public/images/mbMultibancoIcon.png" alt="">
+            </div>
+            <div id="busPassPaymentInfo">
+                <h4>Pagamento Via Multibanco - Pagamento de Serviços</h4>
+            <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking.</p>
+            </div>
+            <fieldset>
+                <legend>Estado do pagamento</legend>
+                <div id="paymentState"></div>
+            </fieldset>
+            <fieldset>
+                <legend>Referência de multibanco</legend>
+                <div id="paymentReference">123-456-789</div>
+            </fieldset>
+            <fieldset>
+                <legend>Valor a Pagar</legend>
+                <div id="paymentPrice" class="row"></div>
+            </fieldset>
+        </div>
     </div>
-    <footer>
-        Universidade da Madeira
-    </footer>
 
     <script>
         let payment = {
@@ -36,8 +49,8 @@
         let paymentPriceDisplay = document.getElementById("paymentPrice");
 
         paymentStateDisplay.insertAdjacentHTML("afterbegin", payment.state);
-        paymentReferenceDisplay.insertAdjacentHTML("afterbegin", payment.reference);
-        paymentPriceDisplay.insertAdjacentHTML("afterbegin", `${payment.price.toFixed(2)}€`)
+        //paymentReferenceDisplay.insertAdjacentHTML("afterbegin", payment.reference);
+        paymentPriceDisplay.insertAdjacentHTML("afterbegin", `${payment.price.toFixed(2)}`)
     </script>
 
 </body>
