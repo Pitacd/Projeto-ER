@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/myStyles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navBar">
+        <div id="moreOpcIcon"></div>
+        <div id="pageName">Passe</div>
+        <div id="feedbackIcon"></div>
+    </nav>
+    <div id="contentBox">
+        <div id="paymentInfo">
+            <div id="busPassPaymentTitle"> 
+                <h3>Informações do Passe</h3>
+            </div>
+            <div id="busPassPaymentInfo">
+                <p>Passe associado a <b id="passOwner"><%= pass.owner %></b></p>
+            </div>
+            <fieldset>
+                <legend>Estado de Pagamento</legend>
+                <div id="passPaymentState"><%= pass.paymentState %></div>
+            </fieldset>
+            <fieldset>
+                <legend>Título</legend>
+                <div id="passTitleType"><%= pass.titleType %></div>
+            </fieldset>
+            <fieldset>
+                <legend>Validade</legend>
+                <div id="passValidity"> <%= pass.validity %> </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

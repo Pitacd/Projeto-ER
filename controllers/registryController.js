@@ -1,11 +1,11 @@
 const fs = require('fs');
 
 function get(req, res){
-    res.sendFile('register.html', { root : 'views'});
+    res.render('register.ejs');
 }
 
 function post(req, res){
-    res.sendFile('register.html', { root : 'views'});
+    res.render('register.ejs');
 }
 
 module.exports = { get, post };

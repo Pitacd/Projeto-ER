@@ -1,5 +1,5 @@
 function get(req, res){
-    res.sendFile(`busSchedules.html`, { root: 'views' });
+    res.render(`busSchedules.ejs`);
 }
 
 module.exports = { get };

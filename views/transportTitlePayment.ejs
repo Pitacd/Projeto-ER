@@ -20,38 +20,21 @@
             </div>
             <div id="busPassPaymentInfo">
                 <h4>Pagamento Via Multibanco - Pagamento de Serviços</h4>
-            <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking.</p>
+                <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking. Utilizae a entidade <b>12345</b>.</p>
             </div>
             <fieldset>
                 <legend>Estado do pagamento</legend>
-                <div id="paymentState"></div>
+                <div id="paymentState"><%= payment.state %></div>
             </fieldset>
             <fieldset>
                 <legend>Referência de multibanco</legend>
-                <div id="paymentReference">123-456-789</div>
+                <div id="paymentReference"><%= payment.reference %></div>
             </fieldset>
             <fieldset>
                 <legend>Valor a Pagar</legend>
-                <div id="paymentPrice" class="row"></div>
+                <div id="paymentPrice"><%= payment.price.toFixed(2) %></div>
             </fieldset>
         </div>
     </div>
-
-    <script>
-        let payment = {
-            state : "Pago",
-            reference : 123890456,
-            price : 67.00,
-        };
-
-        let paymentStateDisplay = document.getElementById("paymentState");
-        let paymentReferenceDisplay = document.getElementById("paymentReference");
-        let paymentPriceDisplay = document.getElementById("paymentPrice");
-
-        paymentStateDisplay.insertAdjacentHTML("afterbegin", payment.state);
-        //paymentReferenceDisplay.insertAdjacentHTML("afterbegin", payment.reference);
-        paymentPriceDisplay.insertAdjacentHTML("afterbegin", `${payment.price.toFixed(2)}`)
-    </script>
-
 </body>
 </html>

@@ -1,11 +1,11 @@
 const fs = require('fs');
 
 function get(req, res){
-    res.sendFile('login.html', { root : 'views' });
+    res.render('login.ejs');
 }
 
 function post(req, res){
-    res.sendFile('login.html', { root : 'views' });
+    res.render('login.ejs');
 }
 
 module.exports = { get, post };
