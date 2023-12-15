@@ -15,7 +15,7 @@
             <p>Associar Passe</p>
         </div>
         <p>Para poder associar o passe com a aplicação. Por favor preencha o seguinte formulário, que será enviado para os Horários do Funchal.</p>
-        <form id="formToConnectBusPass" action="/pass">
+        <form id="formToConnectBusPass" method="post">
             <label>
                 Nome Completo
                 <input type="text" name="fullName">
@@ -29,8 +29,8 @@
                 <input type="number" name="busPassNumber">
             </label>
             <div id="formConnectBusPassBtns">
-                <button type="submit" id="btnSendFormBusPass" name="sendForm">Enviar</button>
-                <button type="button" name="cancelForm">Cancelar</button>  
+                <button type="submit" id="btnSendFormBusPass">Enviar</button>
+                <a href="/pass"><button type="button">Cancelar</button></a> 
             </div>
         </form>
     </div>
