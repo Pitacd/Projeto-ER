@@ -21,7 +21,7 @@ function regist(email, password){
         }
         if(msg===""){
             //registrar
-            fs.writeFileSync('./accounts.json', JSON.stringify(accounts));
+            fs.writeFileSync('./accounts.json', JSON.stringify(accounts.accounts.push({email : email, password : password})));
             msg="Registada com sucesso";
         }
     }
