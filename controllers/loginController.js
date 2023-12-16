@@ -9,7 +9,10 @@ function post(req, res){
     let { email, password } = req.body;
     let error = login(email, password);
     if(error){
+        console.log(error);
+
         // TODO: send error to the frontend
+        
         res.redirect('/login');
         return;
     }

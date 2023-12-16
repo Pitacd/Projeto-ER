@@ -5,15 +5,18 @@ function get(req, res){
     res.render('register.ejs');
 }
 
-function post(req, res){
+function post(req, res, next){
     let { email, password, confirmPassword } = req.body;
     let error = ''; 
     if(password != confirmPassword){
         error = 'Passwords diferentes';
     }
-    erro = register(email, password);
+    error = register(email, password);
     if(error){
+        console.log(error);
+
         // TODO: send error to the fronted
+        
         res.redirect('/register');
         return;
     }
