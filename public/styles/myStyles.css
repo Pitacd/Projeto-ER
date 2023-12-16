@@ -243,7 +243,7 @@ body{
     width: 80%;
     margin: 1em auto 0;
 }
-#paymentInfo>fieldset{
+#paymentInfo fieldset{
     border: solid black 1px;
     border-radius: 0.5em;
     margin-bottom: 1rem;
@@ -257,17 +257,15 @@ body{
     font-weight: bold;
     font-size: 16px;
 }
-#paymentPrice{
-    font-size: 2.5rem;
+#paymentInfo legend+div{
+    font-size: 1.2rem;
     padding: 1rem;
+}
+#paymentPrice{
+    font-size: 2rem !important;
     font-weight: bold;
     &::after{
         content: "€";
         padding-left: 0.2em;
     }
-}
-#paymentReference,
-#paymentState{
-    font-size: 1.25rem;
-    padding: 1rem;
 }
