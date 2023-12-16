@@ -5,7 +5,7 @@ function get(req, res){
         paymentState : 'Pago',
         validity : '12-12-2030'
     };
-    res.render('viewPass.ejs', { pass });
+    res.render('viewPass.ejs', { pageTitle: "Passe", pass });
 }
 
 module.exports = { get };
