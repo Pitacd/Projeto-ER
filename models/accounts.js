@@ -1,13 +1,12 @@
 const accounts = require('./accounts.json');
 const fs = require("fs");
 
-function regist(email, password){
+function register(email, password){
     const msg="";
     //ver se email contem @student.uma.pt ou @staff.uma.pt
     if(!(msg.endsWith("@staff.uma.pt") || msg.endsWith("@student.uma.pt"))){
         msg="Email inválido.";
     }else{
-
         //ver se conta ja existe
         accounts.accounts.every(account => {
             if(email===account.email){
@@ -21,7 +20,7 @@ function regist(email, password){
         }
         if(msg===""){
             //registrar
-            fs.writeFileSync('./accounts.json', JSON.stringify(accounts.accounts.push({email : email, password : password})));
+            fs.writeFileSync('./accounts.json', JSON.stringify(accounts.push({email : email, password : password})));
             msg="Registada com sucesso";
         }
     }
@@ -30,7 +29,7 @@ function regist(email, password){
 
 function login(email, password){
     const msg="";
-    accounts.accounts.every(account => {
+    accounts.every(account => {
         if(email===account.email){
             if(password===account.password){
                 msg="Login realizado com sucesso.";
@@ -47,3 +46,5 @@ function login(email, password){
     }
     return msg;
 }
+
+module.exports = { register, login };
