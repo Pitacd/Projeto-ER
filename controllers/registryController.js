@@ -12,12 +12,11 @@ function post(req, res, next){
     let { email, password, confirmPassword } = req.body; 
     if(password != confirmPassword){
         error = 'Passwords diferentes';
-        res.redirect('/register');
-        return;
     }
-    error = register(email, password);
+    else{
+        error = register(email, password);
+    }
     if(error){
-        console.log(error);
         res.redirect('/register');
         return;
     }
