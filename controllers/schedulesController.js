@@ -1,4 +1,4 @@
-const busSchedules = require("../model/busSchedules.json");
+const busSchedules = require("../models/busSchedules.json");
 
 function get(req, res){
     res.render(`busSchedules.ejs`, {pageTitle: "Transporte", busSchedules});
