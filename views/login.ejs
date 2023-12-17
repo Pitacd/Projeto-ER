@@ -12,12 +12,6 @@
             <img src="../public/images/bus-school.png">
             <p id="pLogin">Login</p>
         </div>
-
-        <!--TODO: stylization of error message -->
-        <% if (error) { %>
-            <h4 style="color:red"><%= error %></h4>
-        <% } %>
-
         <form method="post" id="formToLogin">
             <br>
             <label>
@@ -34,5 +28,15 @@
             </div>
         </form>
     </div>
+    <script>
+        if (error) { 
+            Swal.fire({
+                title: 'Conta não está registado',
+                text: 'Verifique se introduziu corretamente os campos',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        } 
+    </script>
 </body>
 </html>
