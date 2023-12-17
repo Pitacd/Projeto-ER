@@ -12,6 +12,12 @@
             <img src="../public/images/bus-school.png">
             <p id="pLogin">Login</p>
         </div>
+
+        <!--TODO: stylization of error message -->
+        <% if (error) { %>
+            <h4 style="color:red"><%= error %></h4>
+        <% } %>
+
         <form method="post" id="formToLogin">
             <br>
             <label>
