@@ -10,11 +10,9 @@
     <%- include("../views/partials/moreOpcOverlay.ejs"); %>
     <div id="contentBox">
         <% if (!pass) { %>
-            
             <!--TODO: need stylization-->
             <h3>O utilizador não está associado a nenhum passe</h3>
             <a href="/pass/association">Associar Passe</a>
-
         <% } else { %>
             <div id="paymentInfo">
                 <div id="busPassPaymentTitle"> 
