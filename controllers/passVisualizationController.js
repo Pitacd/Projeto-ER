@@ -5,6 +5,7 @@ function get(req, res){
         paymentState : 'Pago',
         validity : '12-12-2030'
     };
+    // let pass = undefined;
     res.render('viewPass.ejs', { pass });
 }
 

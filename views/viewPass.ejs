@@ -9,26 +9,34 @@
     <%- include("../views/partials/navBar.ejs"); %>
     <%- include("../views/partials/moreOpcOverlay.ejs"); %>
     <div id="contentBox">
-        <div id="paymentInfo">
-            <div id="busPassPaymentTitle"> 
-                <h3>Informações do Passe</h3>
+        <% if (!pass) { %>
+            
+            <!--TODO: need stylization-->
+            <h3>O utilizador não está associado a nenhum passe</h3>
+            <a href="/pass/association">Associar Passe</a>
+
+        <% } else { %>
+            <div id="paymentInfo">
+                <div id="busPassPaymentTitle"> 
+                    <h3>Informações do Passe</h3>
+                </div>
+                <div id="busPassPaymentInfo">
+                    <p>Passe associado a <b id="passOwner"><%= pass.owner %></b></p>
+                </div>
+                <fieldset>
+                    <legend>Estado de Pagamento</legend>
+                    <div id="passPaymentState"><%= pass.paymentState %></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Título</legend>
+                    <div id="passTitleType"><%= pass.titleType %></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Validade</legend>
+                    <div id="passValidity"> <%= pass.validity %> </div>
+                </fieldset>
             </div>
-            <div id="busPassPaymentInfo">
-                <p>Passe associado a <b id="passOwner"><%= pass.owner %></b></p>
-            </div>
-            <fieldset>
-                <legend>Estado de Pagamento</legend>
-                <div id="passPaymentState"><%= pass.paymentState %></div>
-            </fieldset>
-            <fieldset>
-                <legend>Título</legend>
-                <div id="passTitleType"><%= pass.titleType %></div>
-            </fieldset>
-            <fieldset>
-                <legend>Validade</legend>
-                <div id="passValidity"> <%= pass.validity %> </div>
-            </fieldset>
-        </div>
+        <% } %>
     </div>
     <script src="../public/scripts/overlayMoreOpcPages.js"></script>
 </body>
