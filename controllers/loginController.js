@@ -11,7 +11,7 @@ function get(req, res){
 function post(req, res){
     let { email, password } = req.body;
     error = login(email, password);
-    if(error){
+    if(error && !error.includes("sucesso")){
         console.log(error);
         res.redirect('/login');
         return;
