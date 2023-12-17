@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { login } = require('../models/accounts');
+const { login } = require('../models/accounts.js');
 
 let error = '';
 
