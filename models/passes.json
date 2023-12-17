@@ -1,8 +1,9 @@
 [
-    {
-        "owner":"30",
-        "titleType":"Sub23",
-        "paymentState":"Pago",
-        "validity": "12-1-2029"
-    }
+  {
+    "passNumber": 123456789,
+    "owner": "30",
+    "titleType": "Sub23",
+    "paymentState": "Pago",
+    "validity": "12-1-2029"
+  }
 ]
