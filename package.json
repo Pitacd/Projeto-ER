@@ -18,7 +18,8 @@
   "homepage": "https://github.com/Pitacd/Projeto-ER#readme",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sweetalert2": "^11.10.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
