@@ -53,9 +53,9 @@ function login(email, password){
         return true;
     });
 
-    // if(msg===""){
-    //     msg="Conta não registada.";
-    // }
+    if(msg===""){
+        msg="Conta não registada.";
+    }
 
     return msg;
 }
