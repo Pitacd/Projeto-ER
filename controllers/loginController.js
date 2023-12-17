@@ -1,18 +1,18 @@
 const fs = require('fs');
 const { login } = require('../models/accounts');
 
+let error = '';
+
 function get(req, res){
-    res.render('login.ejs');
+    res.render('login.ejs', { error });
+    error = '';
 }
 
 function post(req, res){
     let { email, password } = req.body;
-    let error = login(email, password);
+    error = login(email, password);
     if(error){
         console.log(error);
-
-        // TODO: send error to the frontend
-        
         res.redirect('/login');
         return;
     }

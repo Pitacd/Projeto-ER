@@ -28,7 +28,7 @@ function register(email, password){
             accounts.push({email : email, password : password});
             let updatedJSON = JSON.stringify(accounts, null, 2);
             fs.writeFileSync(path.join(__dirname, 'accounts.json'), updatedJSON);
-            msg="Registada com sucesso";
+            // msg="Registada com sucesso";
         }
     }
     return msg;
@@ -53,9 +53,9 @@ function login(email, password){
         return true;
     });
 
-    if(msg===""){
-        msg="Conta não registada.";
-    }
+    // if(msg===""){
+    //     msg="Conta não registada.";
+    // }
 
     return msg;
 }
