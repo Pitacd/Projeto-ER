@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if(error) { %>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <% } %>
     <link rel="stylesheet" href="/public/styles/myStyles.css">
     <title>Register</title>
 </head>
@@ -12,12 +15,6 @@
             <img src="../public/images/bus-school.png">
             <p id="pRegister">Registo</p>
         </div>
-
-        <!--TODO: stylization of error message -->
-        <% if (error) { %>
-            <h4 style="color:red"><%= error %></h4>
-        <% } %>
-
         <form method="post" id="formToRegister">
             <br>
             <label>
@@ -38,5 +35,14 @@
             </div>
         </form>
     </div>
+    <% if(error) { %>
+        <script>
+            Swal.fire({
+                title: '<%= error %>',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        </script>
+        <% } %>
 </body>
 </html>
