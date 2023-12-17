@@ -12,7 +12,7 @@
     <div id="contentBox">
         <% busSchedules.forEach(function (busSchedule) { %>
         <div class="boxBusEvent <%= busSchedule.eventType %>EventBox">
-            <p class="boxTimeEvent <%= (busSchedule.eventType == "willArrive") ? "tillArrive" : (busSchedule.eventType == "cancel") ? "gotCancel" : "isLate"%>">Atrasado 5min<span><%= busSchedule.busScheduleTime %></span></p>
+            <p class="boxTimeEvent <%= (busSchedule.eventType == "willArrive") ? "tillArrive" : (busSchedule.eventType == "cancel") ? "gotCancel" : "isLate"%>"><%= busSchedule.busScheduleText %><span><%= busSchedule.busScheduleTime %></span></p>
             <p class = "busID"><%= busSchedule.busNumber %> - <%= busSchedule.busName %></p> 
         </div>
         <% }); %>
