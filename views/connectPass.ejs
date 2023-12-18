@@ -17,15 +17,15 @@
         <p>Para poder associar o passe com a aplicação. Por favor preencha o seguinte formulário, que será enviado para os Horários do Funchal.</p>
         <form id="formToConnectBusPass" method="post">
             <label>
-                Nome Completo
+                Nome Completo <span>Deve conter apenas letras</span>
                 <input type="text" name="fullName" required>
             </label>
             <label>
-                NIF
-                <input type="number" name="nif" required>
+                NIF <span>Deve conter 9 números.</span>
+                <input type="number" name="nif" maxlenght="9" required>
             </label>
             <label>
-                Número de Passe
+                Número de Passe <span>Deve conter números</span>
                 <input type="number" name="busPassNumber" required>
             </label>
             <div id="formConnectBusPassBtns">
