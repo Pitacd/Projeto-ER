@@ -8,36 +8,32 @@ function getPassByOwner(owner){
     return pass;
 }
 
-function addPass(passNumber, passOwner){
-    let buffer = fs.readFileSync(path.join(__dirname, 'passes.json'),'utf8');
-    let passes = JSON.parse(buffer); 
-
-    let newPass = {
-        passNumber : passNumber,
-        owner : passOwner,
-        // Attributes are static to simualate fetching
-        // the transport title info from the pass number
-        title : 'Sub23',
-        paymentState : 'Em atraso',
-        validity : '1-1-2040'
-    };
-
-    let i = passes.findIndex((value) =>{
-        value.passNumber == passNumber
-    });
-
-    // Check if the owner of the pass is
-    // already associated with another pass
-    if (i == -1){
-        // add a new pass
-        passes.push(newPass);
-    } else {
-        // update the existing one 
-        passes[i] = newPass;
+function verifyErrorsOnFormAssociatePass(ownerName, ownerNIF){
+    if(ownerNIF.length < 9){
+        return "Números em falta no NIF";
     }
-
-    let updatedJSON = JSON.stringify(passes, null, 2);
-    fs.writeFileSync(path.join(__dirname, 'passes.json'), updatedJSON);
+    if(ownerNIF.length > 9){
+        return "Números a mais no NIF";
+    }
+    if(/[0-9]/.test(ownerName)){
+        return "O nome contém números"
+    }
+    return "";
 }
 
-module.exports = { getPassByOwner, addPass };
+function sendPassToBeVerify(passNumber, ownerName, ownerNIF){
+    let buffer = fs.readFileSync(path.join(__dirname, 'passesToBeVerify.json'),'utf8');
+    let passesToBeVerify = JSON.parse(buffer); 
+
+    let newPass = {
+        passNumber: passNumber,
+        ownerName: ownerName,
+        ownerNIF: ownerNIF
+    };
+
+    passesToBeVerify.push(newPass)
+    let updatedJSON = JSON.stringify(passesToBeVerify, null, 2);
+    fs.writeFileSync(path.join(__dirname, 'passesToBeVerify.json'), updatedJSON);
+}
+
+module.exports = { getPassByOwner, sendPassToBeVerify, verifyErrorsOnFormAssociatePass };
