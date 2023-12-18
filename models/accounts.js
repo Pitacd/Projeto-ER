@@ -60,4 +60,9 @@ function login(email, password){
     return msg;
 }
 
-module.exports = { register, login };
+function getNumberEmail(email){
+    const arrEmail = email.split("@");
+    return arrEmail[0];
+}
+
+module.exports = { register, login, getNumberEmail };
