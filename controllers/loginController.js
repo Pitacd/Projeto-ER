@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { login } = require('../models/accounts.js');
+const { login, getNumberEmail } = require('../models/accounts.js');
 
 let error = '';
 
@@ -16,7 +16,7 @@ function post(req, res){
         res.redirect('/login');
         return;
     }
-    res.redirect('/schedules');
+    res.redirect('/schedules?user='+getNumberEmail(email));
 }
 
 module.exports = { get, post };
