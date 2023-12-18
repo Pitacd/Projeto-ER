@@ -1,12 +1,19 @@
-const { addPass } = require("../models/passes");
+const { sendPassToBeVerify, verifyErrorsOnFormAssociatePass } = require("../models/passes");
+let error = '';
 
 function get(req, res){
-    res.render('connectPass.ejs', {pageTitle : "Passe"});
+    res.render('connectPass.ejs', {pageTitle : "Passe", error});
+    error = '';
 }
 
 function post(req, res){
-    let { busPassNumber, fullName } = req.body;
-    addPass(busPassNumber, fullName);
+    let { busPassNumber, fullName, nif} = req.body;
+    error = verifyErrorsOnFormAssociatePass(fullName, nif);
+    if(error){
+        res.redirect('/pass/association');
+        return;
+    }
+    sendPassToBeVerify(busPassNumber, fullName, nif);
     res.redirect('/pass');
 }
 
