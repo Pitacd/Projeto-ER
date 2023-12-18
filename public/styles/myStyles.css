@@ -199,6 +199,11 @@ body{
     padding-inline: 0.5em;
     font-size: 16px;
 }
+#formToConnectBusPass>label>span{
+    margin-top: 0.5em;
+    color: red;
+    font-size: 14px;
+}
 #formConnectBusPassBtns,
 #divLoginBtns,
 #divRegisterBtns{
