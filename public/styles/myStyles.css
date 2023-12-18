@@ -241,8 +241,7 @@ body{
     font-weight: bold;
 }
 #passNotAssociated{
-    position: absolute;
-    left: 33%;
+    background: url('../images/cancelIcon.png') center/contain no-repeat;
 }
 #btnAssociatPass{
     display: block;
