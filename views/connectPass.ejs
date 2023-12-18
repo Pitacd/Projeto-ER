@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if(error) { %>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <% } %>
     <link rel="stylesheet" href="/public/styles/myStyles.css">
     <title>Associar Passe - UMaHora</title>
 </head>
@@ -22,7 +25,7 @@
             </label>
             <label>
                 NIF <span>Deve conter 9 números.</span>
-                <input type="number" name="nif" maxlenght="9" required>
+                <input type="number" name="nif" required>
             </label>
             <label>
                 Número de Passe <span>Deve conter números</span>
@@ -35,5 +38,14 @@
         </form>
     </div>
     <script src="../public/scripts/overlayMoreOpcPages.js"></script>
+    <% if(error) { %>
+        <script>
+            Swal.fire({
+                title: '<%= error %>',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        </script>
+        <% } %>
 </body>
 </html>
