@@ -1,21 +1,30 @@
 const fs = require('fs');
 const { login, getNumberEmail } = require('../models/accounts.js');
 
-let error = '';
+function get(req, res, next){
+    // Initialize user object in the first call
+    if(!req.session.user)
+        req.session.user = {};
 
-function get(req, res){
+    // Initialize error message in the first call
+    if(req.session.error == undefined)
+        req.session.error = '';
+
+    let { error } = req.session;
+    req.session.error = '';
     res.render('login.ejs', { error });
-    error = '';
 }
 
 function post(req, res){
     let { email, password } = req.body;
-    error = login(email, password);
+    let error = login(email, password);
+
     if(error && !error.includes("sucesso")){
-        console.log(error);
+        req.session.error = error;
         res.redirect('/login');
         return;
     }
+
     res.redirect('/schedules?user=' + getNumberEmail(email));
 }
 
