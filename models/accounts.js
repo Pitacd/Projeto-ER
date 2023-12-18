@@ -3,7 +3,6 @@ const fs = require('fs');
 
 function register(email, password){
     let msg="";
-    
     let buffer = fs.readFileSync(path.join(__dirname, 'accounts.json'),'utf8')
     let accounts = JSON.parse(buffer);
 
@@ -25,7 +24,7 @@ function register(email, password){
         }
 
         if(msg===""){
-            accounts.push({email : email, password : password});
+            accounts.push({id : accounts.length , email : email, password : password});
             let updatedJSON = JSON.stringify(accounts, null, 2);
             fs.writeFileSync(path.join(__dirname, 'accounts.json'), updatedJSON);
             // msg="Registada com sucesso";

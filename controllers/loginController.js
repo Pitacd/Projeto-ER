@@ -16,7 +16,7 @@ function post(req, res){
         res.redirect('/login');
         return;
     }
-    res.redirect('/schedules?user='+getNumberEmail(email));
+    res.redirect('/schedules?user=' + getNumberEmail(email));
 }
 
 module.exports = { get, post };

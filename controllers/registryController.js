@@ -8,18 +8,18 @@ function get(req, res){
     error = '';
 }
 
-function post(req, res, next){
+function post(req, res){
     let { email, password, confirmPassword } = req.body; 
-    if(password != confirmPassword){
+
+    if(password !== confirmPassword)
         error = 'Passwords diferentes';
-    }
-    else{
-        error = register(email, password);
-    }
+    else error = register(email, password);
+
     if(error){
         res.redirect('/register');
         return;
     }
+
     res.redirect('/login');
 }
 
