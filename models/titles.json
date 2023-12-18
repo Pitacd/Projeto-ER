@@ -1,0 +1,34 @@
+[
+    {
+        "titleType": "Sub23 I",
+        "price": 12
+    },
+    {
+        "titleType": "Sub23 II",
+        "price": 22.5
+    },
+    {
+        "titleType": "Invalidez 0",
+        "price": 0
+    },
+    {
+        "titleType": "Invalidez I",
+        "price": 11.35
+    },
+    {
+        "titleType": "Invalidez II",
+        "price": 22.75
+    },
+    {
+        "titleType": "Combinado",
+        "price": 21.85
+    },
+    {
+        "titleType": "Combinado Sub23 I",
+        "price": 21.85
+    },
+    {
+        "titleType": "Combinado Sub23 II",
+        "price": 21.85
+    }
+]
