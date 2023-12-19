@@ -3,5 +3,10 @@
     "id": 0,
     "email": "2080221@student.uma.pt",
     "password": "pikachu"
+  },
+  {
+    "id": 1,
+    "email": "2080121@student.uma.pt",
+    "password": "hello"
   }
 ]
