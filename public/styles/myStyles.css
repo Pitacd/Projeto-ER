@@ -318,6 +318,7 @@ body{
     width: 80%;
     box-shadow: 0 0.5em yellow;
     margin-inline: auto;
+    text-align: center;
 }
 #feedbackBox>*:not(h3){
     font-size: 16px;
