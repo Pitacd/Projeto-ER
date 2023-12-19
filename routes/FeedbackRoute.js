@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const schedulesController = require('../controllers/feedbackController'); 
+const feedbackController = require('../controllers/feedbackController'); 
 
 router.get('/feedback', feedbackController.get);
 
