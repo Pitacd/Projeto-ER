@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
+    <link rel="stylesheet" href="../public/styles/myStyles.css">
+    <title>Feedback - UMaHora</title>
 </head>
 <body>
-    <div class="content">
-        <div class="container">
-            <div class="head">
-                <div class="heading"><h1>Share your experience</h1></div>
-                <div class="close">
-                    <div class="s s1"></div>
-                    <div class="s s2"></div>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="optionA" value="A"> Trip 
-                    </label>
-                    <label>
-                        <input type="checkbox" name="optionB" value="B"> Route
-                    </label>
-                </div>
+    <%- include("../views/partials/navBar.ejs"); %>
+    <%- include("../views/partials/moreOpcOverlay.ejs"); %>
+    <div id="contentBox">
+        <form method="post" id="feedbackBox">
+            <h3>Diga-nos o seu <span>Feedback</span></h3>
+            <div id="feedbackAbout">
+                Feedback sobre:
+                <label>
+                    <input type="radio" name="about" value="Autocarros" required>
+                    Autocarros
+                </label>
+                <label>
+                    <input type="radio" name="about" value="Aplicação">
+                    Aplicação
+                </label>
             </div>
-            <div class="mid">
-                <div class="media"><img src="https://cdn-icons-png.flaticon.com/128/3260/3260838.png" alt="angry"></div>
-                <div class="media"><img src="https://cdn-icons-png.flaticon.com/128/42/42901.png" alt="moderate"></div>
-                <div class="media"><img src="https://cdn-icons-png.flaticon.com/128/3260/3260877.png" alt="neutral"></div>
-                <div class="media"><img src="https://cdn-icons-png.flaticon.com/128/569/569501.png" alt="smile" class="active"></div>
-                <div class="media"><img src="https://cdn-icons-png.flaticon.com/128/1356/1356639.png" alt="happy"></div>
+            <div>
+                <input type="radio" name="classification" class="classification" id="angry" value="1" required>
+                <input type="radio" name="classification" class="classification" id="moderate" value="2">
+                <input type="radio" name="classification" class="classification" id="neutral" value="3">
+                <input type="radio" name="classification" class="classification" id="smile" value="4">
+                <input type="radio" name="classification" class="classification" id="happy" value="5">
             </div>
-            <div class="textarea">
-                <p>Share your experience</p>
-                <textarea name="exp" id="exp" placeholder="Let us Know!"></textarea>
+            <label id="feedbackComent">
+                Comentário:
+                <textarea name="feedback" id="feedbackComent" placeholder="Escreva o sua sugestão ou queixa" required></textarea>
+            </label>
+            <div>
+                <button type="submit">Enviar</button>
+                <a href="/schedules">Cancelar</a>
             </div>
-            <div class="end">
-                <div class="submission">
-                    <button class="sub btn">Send</button>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
+    <script src="../public/scripts/overlayMoreOpcPages.js"></script>
 </body>
 </html>
