@@ -98,6 +98,7 @@ body{
     display: grid;
     grid-template-rows: 50% 50%;
     margin-top: 0.5em;
+    padding: 0.5em 0;
     border-radius: 5px;
 }
 .lateEventBox{
@@ -198,6 +199,11 @@ body{
     padding-inline: 0.5em;
     font-size: 16px;
 }
+#formToConnectBusPass>label>span{
+    margin-top: 0.5em;
+    color: red;
+    font-size: 14px;
+}
 #formConnectBusPassBtns,
 #divLoginBtns,
 #divRegisterBtns{
@@ -222,11 +228,37 @@ body{
     background: rgb(255, 255, 62);
     color: rgb(83, 83, 83);
 }
-#btnSendFormBusPass+button,
-#btnSendFormLogin+button,
-#btnSendFormRegister+button{
+#btnSendFormBusPass+a>button,
+#btnSendFormLogin+a>button,
+#btnSendFormRegister+a>button{
     background: rgb(151, 151, 151);
     color: white;
+}
+/* Pass */
+#infoPaymentPass{
+    text-align: center;
+}
+#infoPaymentPass>p{
+    font-size: 16px;
+}
+#infoPaymentPass>p>span{
+    color: red;
+    font-weight: bold;
+}
+#passNotAssociated{
+    background: url('../images/cancelIcon.png') center/contain no-repeat;
+}
+#btnAssociatPass{
+    display: block;
+    width: 40vw;
+    margin: 2em auto 0;
+    padding: 0.5em;
+    border-radius: 10px;
+    background: rgb(255, 255, 62);
+    color: rgb(83, 83, 83);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
 }
 /* Payment */
 #busPassPaymentTitle,
@@ -241,8 +273,9 @@ body{
 #paymentInfo{
     width: 80%;
     margin: 1em auto 0;
+    text-align: center;
 }
-#paymentInfo>fieldset{
+#paymentInfo fieldset{
     border: solid black 1px;
     border-radius: 0.5em;
     margin-bottom: 1rem;
@@ -256,17 +289,15 @@ body{
     font-weight: bold;
     font-size: 16px;
 }
-#paymentPrice{
-    font-size: 2.5rem;
+#paymentInfo legend+div{
+    font-size: 1.2rem;
     padding: 1rem;
+}
+#paymentPrice{
+    font-size: 2rem !important;
     font-weight: bold;
     &::after{
         content: "€";
         padding-left: 0.2em;
     }
-}
-#paymentReference,
-#paymentState{
-    font-size: 1.25rem;
-    padding: 1rem;
 }

@@ -7,11 +7,8 @@
     <title>Pagamento do Passe - UMaHora</title>
 </head>
 <body>
-    <nav id="navBar">
-        <div id="moreOpcIcon"></div>
-        <div id="pageName">Passe</div>
-        <div id="feedbackIcon"></div>
-    </nav>
+    <%- include("../views/partials/navBar.ejs"); %>
+    <%- include("../views/partials/moreOpcOverlay.ejs"); %>
     <div id="contentBox">
         <div id="paymentInfo">
             <div id="busPassPaymentTitle"> 
@@ -20,7 +17,7 @@
             </div>
             <div id="busPassPaymentInfo">
                 <h4>Pagamento Via Multibanco - Pagamento de Serviços</h4>
-                <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking. Utilizae a entidade <b>12345</b>.</p>
+                <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking. Utilize a entidade <b>12345</b>.</p>
             </div>
             <fieldset>
                 <legend>Estado do pagamento</legend>
@@ -36,5 +33,6 @@
             </fieldset>
         </div>
     </div>
+    <script src="../public/scripts/overlayMoreOpcPages.js"></script>
 </body>
 </html>

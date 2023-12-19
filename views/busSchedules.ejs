@@ -7,32 +7,15 @@
     <title>Transporte Horários - UMaHora</title>
 </head>
 <body>
-    <nav id="navBar">
-        <div id="moreOpcIcon"></div>
-        <div id="pageName">Transporte</div>
-        <a href="" id="feedbackIcon"></a>
-    </nav>
-    <div id="moreOpcOverlay">
-        <ul>
-            <li id="transportRef"><a href="">Transporte</a></li>
-            <li><a href="">Passe</a></li>
-            <li id="feedbackRef"><a href="">Feedback</a></li>
-            <li><a href="">Sair</a></li>
-        </ul>
-    </div>
+    <%- include("../views/partials/navBar.ejs"); %>
+    <%- include("../views/partials/moreOpcOverlay.ejs"); %>
     <div id="contentBox">
-        <div class="boxBusEvent lateEventBox">
-            <p class="boxTimeEvent isLate">Atrasado 5min<span>8:00</span></p>
-            <p class = "busID">51 - Universidade UMa</p> 
+        <% busSchedules.forEach(function (busSchedule) { %>
+        <div class="boxBusEvent <%= busSchedule.eventType %>EventBox">
+            <p class="boxTimeEvent <%= (busSchedule.eventType == "willArrive") ? "tillArrive" : (busSchedule.eventType == "cancel") ? "gotCancel" : "isLate"%>"><%= busSchedule.busScheduleText %><span><%= busSchedule.busScheduleTime %></span></p>
+            <p class = "busID"><%= busSchedule.busNumber %> - <%= busSchedule.busName %></p> 
         </div>
-        <div class="boxBusEvent willArriveEventBox">
-            <p class="boxTimeEvent tillArrive">Chega em 49 min<span>8:30</span></p>
-            <p class = "busID">51 - Universidade UMa</p> 
-        </div>
-        <div class="boxBusEvent  cancelEventBox">
-            <p class="boxTimeEvent gotCancel">Cancelado<span>9:00</span></p>
-            <p class = "busID">51 - Universidade UMa</p> 
-        </div>
+        <% }); %>
     </div>
     <script src="../public/scripts/overlayMoreOpcPages.js"></script>
 </body>

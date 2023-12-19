@@ -1,11 +1,9 @@
+const { getPassByOwner } = require('../models/passes');
+
 function get(req, res){
-    let pass = {
-        owner : 'João Pedro Alves',
-        titleType : 'Sub23',
-        paymentState : 'Pago',
-        validity : '12-12-2030'
-    };
-    res.render('viewPass.ejs', { pass });
+    let { id } = req.session.user;
+    let pass = getPassByOwner(id);
+    res.render('viewPass.ejs', { pageTitle : "Passe", pass : pass});
 }
 
 module.exports = { get };
