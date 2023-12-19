@@ -1,8 +1,9 @@
 [
   {
     "passNumber": "12312312",
-    "ownerId": 1,
+    "ownerId": 0,
     "ownerName": "Pedro Alves",
+    "titleType": "Sub23 I",
     "paymentState": "Em atraso",
     "validity": "1-1-2040"
   }

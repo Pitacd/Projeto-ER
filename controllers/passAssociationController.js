@@ -5,11 +5,9 @@ function get(req, res){
 }
 
 function post(req, res){
-    // TODO use cookies to get the userId //
-    let userId = 1;
-    ////////////////////////////////////////
+    let { id } = req.session.user;
     let { busPassNumber, fullName } = req.body;
-    addPass(busPassNumber, userId, fullName);
+    addPass(busPassNumber, id, fullName);
     res.redirect('/pass');
 }
 

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { login, getNumberEmail } = require('../models/accounts.js');
+const { login, getNumberEmail, getAccount } = require('../models/accounts.js');
 
 function get(req, res, next){
     // Initialize user object in the first call
@@ -25,7 +25,8 @@ function post(req, res){
         return;
     }
 
-    res.redirect('/schedules?user=' + getNumberEmail(email));
+    req.session.user = getAccount(email);
+    res.redirect('/schedules');
 }
 
 module.exports = { get, post };

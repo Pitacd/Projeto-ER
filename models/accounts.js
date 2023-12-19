@@ -64,4 +64,13 @@ function getNumberEmail(email){
     return arrEmail[0];
 }
 
-module.exports = { register, login, getNumberEmail };
+function getAccount(email){
+    let buffer = fs.readFileSync(path.join(__dirname, 'accounts.json'),'utf8')
+    let accounts = JSON.parse(buffer);
+    let account = accounts.find((value)=> {
+        return value.email === email;
+    });
+    return account;
+}
+
+module.exports = { register, login, getNumberEmail, getAccount };
