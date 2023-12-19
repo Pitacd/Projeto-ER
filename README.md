@@ -15,5 +15,5 @@ Na barra de pesquisa do seu browser coloque ```localhost:3000/login``` e será e
   <img width="350" aspect-radio="16/9" src="https://github.com/Pitacd/Projeto-ER/assets/114869752/42678c4d-bb37-4d95-8bf4-b4e95e230341">
 </p>
 
-> Se quiser utilizar contas já existentes, para visualizar os requisitos de visualização de informação sobre passe e realização do pagamento do passe, utilize a conta ```2080221@student.uma.pt``` e de palavra-passe ```pikachu```.
+> Se quiser utilizar contas já existentes, para visualizar os requisitos de visualização de informação sobre passe e realização do pagamento do passe, utilize a conta ```2080221@student.uma.pt``` de palavra-passe ```pikachu```.
 
