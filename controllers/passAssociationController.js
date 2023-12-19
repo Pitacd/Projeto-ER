@@ -7,13 +7,14 @@ function get(req, res){
 }
 
 function post(req, res){
+    let { id } = req.session.user;
     let { busPassNumber, fullName, nif} = req.body;
     error = verifyErrorsOnFormAssociatePass(fullName, nif);
     if(error){
         res.redirect('/pass/association');
         return;
     }
-    sendPassToBeVerify(busPassNumber, fullName, nif);
+    sendPassToBeVerify(busPassNumber, id, fullName, nif);
     res.redirect('/pass');
 }
 

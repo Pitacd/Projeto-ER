@@ -1,10 +1,20 @@
+// Libraries
 const path = require('path');
 const fs = require('fs');
+const { randomInt } = require('crypto');
 
-function getPassByOwner(owner){
+// Constants
+const PAYMENT_STATES = ['Em atraso', 'Pago'];
+
+// Utility functions
+const randomItem = (array) => { return array[randomInt(array.length)];}
+
+function getPassByOwner(ownerId){
     let buffer = fs.readFileSync(path.join(__dirname, 'passes.json'),'utf8');
     let passes = JSON.parse(buffer);
-    pass = passes.find(pass => pass.owner === owner);
+    pass = passes.find((value)=>{
+        return value.ownerId == ownerId;
+    });
     return pass;
 }
 
@@ -21,19 +31,29 @@ function verifyErrorsOnFormAssociatePass(ownerName, ownerNIF){
     return "";
 }
 
-function sendPassToBeVerify(passNumber, ownerName, ownerNIF){
+function sendPassToBeVerify(passNumber, ownerID, ownerName, ownerNIF){
     let buffer = fs.readFileSync(path.join(__dirname, 'passesToBeVerify.json'),'utf8');
     let passesToBeVerify = JSON.parse(buffer); 
 
-    let newPass = {
+    let newPassToBeVerify = {
         passNumber: passNumber,
+        ownerID: ownerID,
         ownerName: ownerName,
         ownerNIF: ownerNIF
     };
 
-    passesToBeVerify.push(newPass)
+    passesToBeVerify.push(newPassToBeVerify)
     let updatedJSON = JSON.stringify(passesToBeVerify, null, 2);
     fs.writeFileSync(path.join(__dirname, 'passesToBeVerify.json'), updatedJSON);
 }
 
-module.exports = { getPassByOwner, sendPassToBeVerify, verifyErrorsOnFormAssociatePass };
+function getTitlePrice(titleType){
+    buffer = fs.readFileSync(path.join(__dirname, 'titles.json'), 'utf8');
+    let titleTypes = JSON.parse(buffer);
+    let { price } = titleTypes.find((value)=>{
+        return value.titleType === titleType;
+    });
+    return price;
+}
+
+module.exports = { getPassByOwner, sendPassToBeVerify, verifyErrorsOnFormAssociatePass, getTitlePrice };
