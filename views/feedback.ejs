@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/myStyles.css">
+    <title>Feedback - UMaHora</title>
+</head>
+<body>
+    <%- include("../views/partials/navBar.ejs"); %>
+    <%- include("../views/partials/moreOpcOverlay.ejs"); %>
+    <div id="contentBox">
+        <form method="post" id="feedbackBox">
+            <h3>Diga-nos o seu <span>Feedback</span></h3>
+            <div id="feedbackAbout">
+                Feedback sobre:
+                <label>
+                    <input type="radio" name="about" value="Autocarros" required>
+                    Autocarros
+                </label>
+                <label>
+                    <input type="radio" name="about" value="Aplicação">
+                    Aplicação
+                </label>
+            </div>
+            <div>
+                <input type="radio" name="classification" class="classification" id="angry" value="1" required>
+                <input type="radio" name="classification" class="classification" id="moderate" value="2">
+                <input type="radio" name="classification" class="classification" id="neutral" value="3">
+                <input type="radio" name="classification" class="classification" id="smile" value="4">
+                <input type="radio" name="classification" class="classification" id="happy" value="5">
+            </div>
+            <label id="feedbackComent">
+                Comentário:
+                <textarea name="feedback" id="feedbackComent" placeholder="Escreva o sua sugestão ou queixa" required></textarea>
+            </label>
+            <div>
+                <button type="submit">Enviar</button>
+                <a href="/schedules">Cancelar</a>
+            </div>
+        </form>
+    </div>
+    <script src="../public/scripts/overlayMoreOpcPages.js"></script>
+</body>
+</html>

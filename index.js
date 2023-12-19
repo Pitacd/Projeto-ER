@@ -9,7 +9,7 @@ const passAssociationRoute = require('./routes/passAssociationRoute');
 const loginRoute = require('./routes/loginRoute');
 const registryRoute = require('./routes/registryRoute');
 const passVisualizationRoute = require('./routes/passVisualizationRoute');
-
+const feedbackRoute = require('./routes/FeedbackRoute');
 // Other constants
 const PORT = 3000;
 const ONEDAY = 24 * 60 * 60 * 1000;
@@ -40,6 +40,7 @@ app.use(passAssociationRoute);
 app.use(loginRoute);
 app.use(registryRoute);
 app.use(passVisualizationRoute);
+app.use(feedbackRoute);
 
 // Listen for requests
 app.listen(PORT, console.log(`Listenning at port ${PORT}`));
