@@ -6,7 +6,7 @@ Proporcionar à comunidade acesso a informações cruciais, tais como horários,
 Para poder visualizar este protótipo deve 
   1. fazer download do projeto
   2. abra o projeto no Visual Studio Code ou IDE que utilize
-  3. no terminal coloque ```npm i``` para poder instalar na sua máquina as packages necessárias para o projeto poder funcionar.
+  3. no terminal do IDE coloque ```npm i``` para poder instalar na sua máquina as packages necessárias para o projeto poder funcionar.
   4. De seguida coloque ```node index.js``` no terminal, para correr um servidor local,
 
 e terá finalizado a sua inicialização para visualizar o protótipo.
