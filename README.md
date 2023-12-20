@@ -25,7 +25,7 @@ Após entrar na página clique na tecla ```F12``` ou com o rato clique no botão
 
 ## Visualizar o protótipo no telemóvel
 Caso deseje visualizar o protótipo no seu telemóvel pode fazê-lo, **terá de já ter feito os passos 1. 2. 3. 4. da Instalação**, tendo que 
-1. no terminal do computador **onde realizou os passos da Instalação** de  coloque ```ipconfig```para descobrir o seu ip na sua rede local
+1. no terminal do computador **onde realizou os passos da Instalação** de  coloque ```ipconfig``` para descobrir o seu ip na sua rede local
 2. procure por Ethernet ou Wireless, de acordo com o meio que está ligado à rede, e abaixo por o endereço IPv4, e terá o seu ```<ip>``` na sua rede local
 3. no barra de navegação do motor de busca do seu telemóvel introduza ```<ip>:3000/login``` 
 
