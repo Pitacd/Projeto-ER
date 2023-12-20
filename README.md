@@ -15,7 +15,7 @@ e terá finalizado a sua inicialização para visualizar o protótipo.
 
 # Visualizar o Protótipo
 Na barra de pesquisa do seu browser do computador coloque ```localhost:3000/login``` e será encaminhado para o página de login, a partir da qual pode explorar o protótipo. 
-> Se quiser utilizar contas já existentes, para visualizar os requisitos de visualização de informação sobre passe e realização do pagamento do passe, utilize a conta ```2080221@student.uma.pt``` de palavra-passe ```pikachu```.
+> Se quiser utilizar contas já existentes, para visualizar os requisitos de visualização de informação sobre passe e realização do pagamento do passe, utilize a conta ```2080221@student.uma.pt``` de palavra-passe ```pikachu``` ou a conta ```2080121@student.uma.pt``` de palavra-passe ```hello``` para realizar a associação do passe, embora possa realizá-la com qualquer outra conta que crie.
 
 ## Ajustar tela para simular ecrã do telemóvel 
 Após entrar na página clique na tecla ```F12``` ou com o rato clique no botão direito do rato e deseguida ir ao Inspecionar, e seguidamente faça ```Ctrl + Shift + M```.
